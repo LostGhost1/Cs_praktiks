@@ -25,9 +25,8 @@ namespace PR1_1
     {
         static void Main(string[] args)
         {
-            Person p = new Person("Rusakov", "Alexey", 35); 
+            Person p = new Person("Yusupov", "Konstantin", 18); 
             Console.WriteLine(p.ToString());
-            Console.ReadKey();
         }
     }
 }

@@ -1,9 +1,9 @@
 ﻿using System;
 
-namespace PR1_1
+namespace PR1_3
 {
   public enum Genders : int { Male, Female, DeadInside };
-  struct Person
+  class Person
   {
     public string firstName;
     public string lastName;
@@ -20,15 +20,27 @@ namespace PR1_1
       return firstName + " " + lastName + " (" + gender + "), age " + age;
     }
   }
-
+  class Manager : Person
+  {
+    string phoneNumber;
+    string officeLocation;
+    public Manager(string _firstName, string _lastName, int _age, Genders _gender, string
+    _phoneNumber, string _officeLocation) : base(_firstName, _lastName, _age, _gender)
+    {
+      phoneNumber = _phoneNumber; officeLocation =
+      _officeLocation;
+    }
+    public override string ToString()
+    {
+      return base.ToString() + ", " + phoneNumber + ", " + officeLocation;
+    }
+  }
   class Program
   {
     static void Main(string[] args)
     {
-      Person p = new Person("Yusupov", "Konstantin", 18, Genders.DeadInside);
+      Manager p = new Manager("Yusupov", "Konstantin", 18, Genders.DeadInside,"88005553535","Kaliningrad");
       Console.WriteLine(p.ToString());
-
-      Console.ReadKey();
     }
   }
 }

@@ -23,10 +23,10 @@ namespace _2
          {
             progressBar1.Value = 0;
           }
-
-         progressBar1.Value += 1;
+           progressBar3.Value = 100 - progressBar1.Value;
+            progressBar1.Value += 1;
          trackBar1.Value=progressBar1.Value;
-         progressBar3.Value=100- progressBar1.Value;
+        
 
     }
 
