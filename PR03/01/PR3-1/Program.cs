@@ -14,7 +14,7 @@ namespace PR3_1
     {
       return Regex.IsMatch(s, "[\\w._-]+@[\\w._-]+");
     }
-      static void Main(string[] args)
+    static void Main(string[] args)
     {
       string s = Console.ReadLine();
       Console.Write(IsPhone(s) ?"IsPhone ":"IsntPhone ");
